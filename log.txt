@@ -1,0 +1,52 @@
+2020-08-18 15:26:41,437 - sketch - INFO - Alright, let's get this started.
+2020-08-18 15:26:41,437 - sketch.log_submodule.sketch_logging_submodule - INFO - Submodule logging worked just fine.
+2020-08-18 15:26:41,437 - sketch.log_submodule.sketch_logging_submodule - INFO - Now let's get that other thread running.
+2020-08-18 15:26:41,437 - sketch.log_submodule.sketch_logging_submodule.logging_loop - INFO - This log should be coming from another thread!
+2020-08-18 15:26:41,938 - sketch.log_submodule.sketch_logging_submodule.logging_loop - INFO - This log should be coming from another thread!
+2020-08-18 15:26:42,439 - sketch.log_submodule.sketch_logging_submodule.logging_loop - INFO - This log should be coming from another thread!
+2020-08-18 15:26:42,940 - sketch.log_submodule.sketch_logging_submodule.logging_loop - INFO - This log should be coming from another thread!
+2020-08-18 15:26:43,441 - sketch.log_submodule.sketch_logging_submodule.logging_loop - INFO - Loop is done. Let's wrap this thread up.
+2020-08-18 15:26:43,441 - sketch.log_submodule.sketch_logging_submodule - INFO - Now let's try that other loop... hope it is not broken!
+2020-08-18 15:26:43,442 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - INFO - Let's call that function over there.
+2020-08-18 15:26:43,442 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - ERROR - Oh no! This function is actually broken!
+Traceback (most recent call last):
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 70, in faulty_loop
+    faulty_function()
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 82, in faulty_function
+    raise RuntimeError("Oh no! This function is actually broken!")
+RuntimeError: Oh no! This function is actually broken!
+2020-08-18 15:26:43,944 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - INFO - Let's call that function over there.
+2020-08-18 15:26:43,944 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - ERROR - Oh no! This function is actually broken!
+Traceback (most recent call last):
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 70, in faulty_loop
+    faulty_function()
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 82, in faulty_function
+    raise RuntimeError("Oh no! This function is actually broken!")
+RuntimeError: Oh no! This function is actually broken!
+2020-08-18 15:26:44,445 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - INFO - Let's call that function over there.
+2020-08-18 15:26:44,445 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - ERROR - Oh no! This function is actually broken!
+Traceback (most recent call last):
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 70, in faulty_loop
+    faulty_function()
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 82, in faulty_function
+    raise RuntimeError("Oh no! This function is actually broken!")
+RuntimeError: Oh no! This function is actually broken!
+2020-08-18 15:26:44,947 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - INFO - Let's call that function over there.
+2020-08-18 15:26:44,947 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - ERROR - Oh no! This function is actually broken!
+Traceback (most recent call last):
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 70, in faulty_loop
+    faulty_function()
+  File "/home/nimbus/projects/rs_dm/sketch/log_submodule/sketch_logging_submodule.py", line 82, in faulty_function
+    raise RuntimeError("Oh no! This function is actually broken!")
+RuntimeError: Oh no! This function is actually broken!
+2020-08-18 15:26:45,448 - sketch.log_submodule.sketch_logging_submodule.faulty_loop - INFO - Loop is done, let's wrap it up.
+2020-08-18 15:26:45,449 - sketch.log_submodule.sketch_logging_submodule - INFO - The subthreads should be over. Let's head back to main.
+2020-08-18 15:26:47,451 - sketch - INFO - Cool. Glad it is done.
+2020-08-18 15:26:47,451 - sketch - INFO - Now let's try to raise an error.
+2020-08-18 15:26:47,452 - sketch - ERROR - Error: something weird happened.
+Traceback (most recent call last):
+  File "/home/nimbus/projects/rs_dm/sketch/__main__.py", line 76, in <module>
+    log_sketch_main()
+  File "/home/nimbus/projects/rs_dm/sketch/__main__.py", line 65, in log_sketch_main
+    raise RuntimeError("Error: something weird happened.")
+RuntimeError: Error: something weird happened.
